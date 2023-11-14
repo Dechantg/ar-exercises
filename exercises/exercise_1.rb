@@ -6,6 +6,11 @@ puts "----------"
 # Your code goes below here ...
 
 class Stores < ActiveRecord::Base
+  has_many :employees, class_name: 'Employee', foreign_key: 'store_id'
+end
+
+class Employee < ActiveRecord::Base
+  belongs_to :store, class_name: 'Stores', foreign_key: 'id'
 end
 
 stores = Stores.new
