@@ -29,3 +29,5 @@ stores.mens_apparel = true
 stores.womens_apparel = false
 stores.save
 
+stores_count = Stores.count
+puts "The number of stores in the table now is #{stores_count}"
